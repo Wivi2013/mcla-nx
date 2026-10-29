@@ -12,3 +12,11 @@ The game the runs directly with shaders compiled specifically for the Switch, wi
 
 > [!NOTE]
 > You need your own Xbox 360 copy of the game (`.iso`) to be able to play this port. This port does not come with copyrighted material. I don't want John Rockstar at my doorstep, y'know.
+
+## Legal
+
+No affiliation with Take-Two or Rockstar Games and Nintendo. "Midnight Club" and "Midnight Club Los Angeles" are trademarks of Take Two Interactive.
+This repository contains no assets or program code from the original game. Users must provide their own legally obtained copy. 
+Running homebrew requires custom firmware, which is against Nintendo's TOS. Doing so risks a ban on your console. You have been warned.
+
+Source code is provided under the GPL-3.0 License (see [LICENSE](LICENSE))
