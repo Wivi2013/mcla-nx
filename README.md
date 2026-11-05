@@ -32,9 +32,6 @@ Your folder should look like this
   game/                     (the game itself)
 ```
 
-> [!NOTE]
-> If you're having bad performance on Docked and don't want to apply a higher OC + you want more FPS, set the resolution to 1280x720.
-
 ## Performance
 
 TBI
