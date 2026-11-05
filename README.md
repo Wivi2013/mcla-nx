@@ -31,22 +31,6 @@ Your folder should look like this
   game/                     (the game itself)
 ```
 
-## Resolution
-
-The resolution is automatic by default (`nfsmw_resolucion_interna = "automatico"`): **1280x720** in handheld mode and
-**1920x1080** docked. It's chosen when the game starts: if you dock or undock the console while playing, the game keeps
-the resolution, scaled to the screen until you restart it. ReverseNX-RT's Fake Docked and Fake Handheld count as well:
-choose the mode in its overlay and restart the game. The choice is kept until you restart the console.
-
-To use one resolution in both modes, set it in `nfsmw.toml` (or in the Debug Menu, category **Graficos**, then
-**Save to config**) and restart the game:
-
-- `1280x720`: the resolution of the Xbox 360 version. Docked, it can give a higher frame rate than `1920x1080`, which
-  has 2.25 times the pixels while the docked GPU clock is only 1.67 times the handheld one.
-- `1920x1080`: sharper, at a high GPU cost, above all in handheld mode.
-- `1024x576`, `640x360` and `640x480` only shrink the image after it is drawn at 1280x720, so they do not raise the
-  frame rate.
-
 > [!NOTE]
 > If you're having bad performance on Docked and don't want to apply a higher OC + you want more FPS, set the resolution to 1280x720.
 
