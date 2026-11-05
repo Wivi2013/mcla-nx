@@ -63,6 +63,7 @@ These are the ""comfortable"" settings that currently (pre-release c100) you can
 > Make sure to follow the guides below.
 
 These guides explain how to do it:
+
 *Special thanks for the Horizon OC team and discord server*
 
 - **[How to get 60 FPS](https://rentry.org/howtoget60fps)**
