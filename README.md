@@ -17,10 +17,15 @@ Thanks to StevensND for his port and for the inspiration.
 ## How to install
 
 1: Download the Switch executables from [releases](https://github.com/Wivi2013/mcla-nx/releases) and extract it.
+
 2: Send the "switch" folder inside the extracted .rar to the root of the Switch SD card.
+
 3: Visit [MCLA-Recomp project](https://github.com/holdmysocks/mcla-recomp) and follow their instructions to recompile your .iso.
+
 4: Locate the game files and copy all of them to switch/MCLA-NX/game
+
 5: Open Sphaira and create a forwarder with 39 bit address space and 4 CPUs.
+
 6: Open game and play (optional)
 
 Your folder should look like this
