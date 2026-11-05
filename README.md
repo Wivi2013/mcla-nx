@@ -39,29 +39,31 @@ Your folder should look like this
 
 ## Performance
 
-TBI
+You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable not considering the horrible sound. As for now (pre-release c100) performance is being worked on
 
 ## Overclocking
 
 Due to the nature of the RAGE engine and my inexperience with coding, for now you need to overclock your console.
-These are the ""comfortable"" settings that currently (pre-release) you can safely run in any console and get a taste of the current progress.
+These are the ""comfortable"" settings that currently (pre-release c100) you can safely run in any console and get a taste of the current progress.
 
 <div align="center">
 
 | Mode | CPU | GPU | Memory |
 | --- | --- | --- | --- |
 | Handheld | 1658 MHz | 460.8 MHz | 1331.2 MHz |
-| Docked | 1963 MHz | 768 MHz | 1600 MHz |
+| Docked (Safe for all) | 1963 MHz | 768 MHz | 1600 MHz |
+| Docked (Mariko Only) | 2397 MHz | 768 MHz | 2133 MHz
 
 </div>
 
 > [!CAUTION]
-> Overclocking is inherently risky so tread carefully. V1 consoles are usually very fickle and have lower limits.
+> Overclocking is inherently risky so tread carefully. V1 consoles are usually very limited by nature of being older units.
 > V2/Lite and OLED consoles can be pushed further so these are recommended if you want an almost lag-free experience
-> meaning 30 FPS with some places going under that, at around 2397 MHz CPU clock, 768 MHz GPU clock and 2133 MHz RAM clock.
+> meaning 30 FPS with some places going under that, running around 2397 MHz CPU clock, 768 MHz GPU clock and 2133 MHz RAM clock.
 > Make sure to follow the guides below.
 
 These guides explain how to do it:
+*Special thanks for the Horizon OC team and discord server*
 
 - **[How to get 60 FPS](https://rentry.org/howtoget60fps)**
 - **[Mariko guide](https://rentry.co/mariko)**
