@@ -37,12 +37,7 @@ Your folder should look like this
 
 ## Performance
 
-In handheld mode the port asks the system for its official 460.8 MHz GPU mode, a standard performance configuration
-of the console and not an overclock. Races average 32 to 35 FPS; the heaviest area measured, the exit of Heritage
-Heights, runs at 21-22 FPS for about 20 seconds.
-
-How it went from a few frames per second to this is explained step by step in
-[docs/performance-history.md](docs/performance-history.md).
+TBI
 
 ## Overclocking
 
