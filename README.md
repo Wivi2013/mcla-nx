@@ -92,3 +92,5 @@ These guides explain how to do it:
 No affiliation with Take-Two or Rockstar Games and Nintendo. "Midnight Club" and "Midnight Club Los Angeles" are trademarks of Take Two Interactive.
 This repository contains no assets or program code from the original game. Users must provide their own legally obtained copy. 
 Running homebrew requires custom firmware, which is against Nintendo's TOS. Doing so risks a ban on your console. You have been warned.
+
+Source code will be released when I get the time to get everything sorted.
