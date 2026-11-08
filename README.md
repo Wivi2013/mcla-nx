@@ -9,6 +9,7 @@ Native port of the 2008's fourth installment on the Midnight Club series: **Midn
 
 There is no emulation here. None, zilch, nada. It is pure PowerPC code translated to C++ using [ReXGlue](https://github.com/rexglue/rexglue-sdk), thanks to the efforts of the devs of [MCLA-Recomp project](https://github.com/holdmysocks/mcla-recomp). 
 The game the runs directly with shaders compiled specifically for the Switch, with a launcher compiled to run with the recompiled code. It uses Deko3D as its 3D renderer and targets 30 FPS. Mild CPU overclock might be needed to reach such target. Everything will be explained in this document.
+
 Thanks to StevensND for his port and for the inspiration.
 
 > [!NOTE]
@@ -39,12 +40,12 @@ Your folder should look like this
 
 ## Performance
 
-You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable not considering the horrible sound. As for now (pre-release c100) performance is being worked on
+You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c105) performance is being worked on
 
 ## Overclocking
 
 Due to the nature of the RAGE engine and my inexperience with coding, for now you need to overclock your console.
-These are the ""comfortable"" settings that currently (pre-release c100) you can safely run in any console and get a taste of the current progress.
+These are the ""comfortable"" settings that currently (pre-release c105) you can safely run in any console and get a taste of the current progress.
 
 <div align="center">
 
