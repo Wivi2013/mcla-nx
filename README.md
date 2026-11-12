@@ -72,6 +72,20 @@ These guides explain how to do it:
 - **[Erista guide](https://rentry.co/erista)**
 - **[How to test stability](https://rentry.co/howtoteststability)**
 
+## Progress
+
+Here you will learn about the relative progress of the game. It does not reflect the results you can get on the current pre-release build.
+
+<div align="center">
+
+| Component | Status | Note |
+| --- | --- | --- |
+| Renderer | Complete | Completed in c034 - Swapped to Deko3D on 0.3.0 |
+| Audio | Complete | Completed in c036 - Completely fixed in c151 | 
+| Controls | Complete | Completed in c037 |
+| Graphics | 80% | Needs corrections, specially with light source brightness |
+| Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
+| Performance | 60% | Game reaches about 20 FPS min on busy scenes. Needs 30 on all occasions |
 
 ## Legal
 
