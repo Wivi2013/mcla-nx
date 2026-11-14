@@ -34,18 +34,19 @@ Your folder should look like this
 /switch/MCLA-NX/
   nfsmw-nx.nro
   mcla_graphics.toml        (graphical settings)
+  mcla.toml                 (game settings/debug options)
   shaders-c064/             (the game shaders)
   game/                     (the game itself)
 ```
 
 ## Performance
 
-You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c105) performance is being worked on
+You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c177) performance is decent enough to enjoy the game at recommended overclock settings
 
 ## Overclocking
 
 Due to the nature of the RAGE engine and my inexperience with coding, for now you need to overclock your console.
-These are the ""comfortable"" settings that currently (pre-release c105) you can safely run in any console and get a taste of the current progress.
+These are the ""comfortable"" settings that currently (pre-release c177) you can safely run in any console and get a taste of the current progress.
 
 <div align="center">
 
@@ -65,12 +66,12 @@ These are the ""comfortable"" settings that currently (pre-release c105) you can
 
 These guides explain how to do it:
 
-*Special thanks for the Horizon OC team and discord server*
-
 - **[How to get 60 FPS](https://rentry.org/howtoget60fps)**
 - **[Mariko guide](https://rentry.co/mariko)**
 - **[Erista guide](https://rentry.co/erista)**
 - **[How to test stability](https://rentry.co/howtoteststability)**
+
+*Special thanks for the Horizon OC team and discord server*
 
 ## Progress
 
@@ -87,6 +88,8 @@ Here you will learn about the relative progress of the game. It does not reflect
 | Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
 | Performance | 60% | Game reaches about 20 FPS min on busy scenes. Needs 30 on all occasions |
 
+<div align="left">
+  
 ## Legal
 
 No affiliation with Take-Two or Rockstar Games and Nintendo. "Midnight Club" and "Midnight Club Los Angeles" are trademarks of Take Two Interactive.
