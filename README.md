@@ -86,7 +86,7 @@ Here you will learn about the relative progress of the game. It does not reflect
 | Controls | Complete | Completed in c037 |
 | Graphics | 80% | Needs corrections, specially with light source brightness |
 | Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
-| Performance | 60% | Game reaches about 20 FPS min on busy scenes. Needs 30 on all occasions |
+| Performance | 80% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
 
 <div align="left">
   
