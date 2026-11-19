@@ -56,7 +56,7 @@ These are the ""comfortable"" settings that currently (pre-release c177) you can
 | Docked (Safe for all) | 1963 MHz | 768 MHz | 1600 MHz |
 | Docked (Mariko Only) | 2397 MHz | 1152 MHz | 2133 MHz
 
-- Baseline for performance figures currently: `1685\460\1331'. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks.
+- Baseline for performance figures currently: `1685\460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks.
 
 </div>
 
