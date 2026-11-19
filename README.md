@@ -41,7 +41,7 @@ Your folder should look like this
 
 ## Performance
 
-You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1331`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c177) performance is decent enough to enjoy the game at recommended overclock settings
+You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1331`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c230) performance is decent enough to enjoy the game at recommended overclock settings
 
 ## Overclocking
 
@@ -87,9 +87,9 @@ captured from internal builds
 | Renderer | Complete | Completed in c034 - Swapped to Deko3D on 0.3.0 |
 | Audio | Complete | Completed in c036 - Completely fixed in c151 | 
 | Controls | Complete | Completed in c037 |
-| Graphics | 80% | Needs corrections, specially with light source brightness |
+| Graphics | 90% | Needs corrections, specially with light source brightness |
 | Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
-| Performance | 80% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
+| Performance | 90% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
 | Extras | 0% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
