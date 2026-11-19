@@ -7,7 +7,7 @@
 
 Native port of the 2008's fourth installment on the Midnight Club series: **Midnight Club Los Angeles from Xbox 360**.
 
-There is no emulation here. None, zilch, nada. It is pure PowerPC code translated to C++ using [ReXGlue](https://github.com/rexglue/rexglue-sdk), thanks to the efforts of the devs of [MCLA-Recomp project](https://github.com/holdmysocks/mcla-recomp). 
+There is no emulation here. None, zilch, nada. It is pure PowerPC code translated to C++ using [ReXGlue](https://github.com/rexglue/rexglue-sdk), thanks to the efforts of the devs of [MCLA-Recomp project](https://github.com/RenanQueiroz/mcla-recomp). 
 The game the runs directly with shaders compiled specifically for the Switch, with a launcher compiled to run with the recompiled code. It uses Deko3D as its 3D renderer and targets 30 FPS. Mild CPU overclock might be needed to reach such target. Everything will be explained in this document.
 
 Thanks to StevensND for his port and for the inspiration.
@@ -21,7 +21,7 @@ Thanks to StevensND for his port and for the inspiration.
 
 2: Send the "switch" folder inside the extracted .rar to the root of the Switch SD card.
 
-3: Visit [MCLA-Recomp project](https://github.com/holdmysocks/mcla-recomp) and follow their instructions to recompile your .iso.
+3: Visit [MCLA-Recomp project](https://github.com/RenanQueiroz/mcla-recomp) and follow their instructions to recompile your .iso.
 
 4: Locate the game files and copy all of them to switch/MCLA-NX/game
 
@@ -41,7 +41,7 @@ Your folder should look like this
 
 ## Performance
 
-You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1333`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c177) performance is decent enough to enjoy the game at recommended overclock settings
+You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1331`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c177) performance is decent enough to enjoy the game at recommended overclock settings
 
 ## Overclocking
 
@@ -52,9 +52,11 @@ These are the ""comfortable"" settings that currently (pre-release c177) you can
 
 | Mode | CPU | GPU | Memory |
 | --- | --- | --- | --- |
-| Handheld | 1658 MHz | 460.8 MHz | 1331.2 MHz |
+| Handheld | 1683 MHz | 460.8 MHz | 1331 MHz |
 | Docked (Safe for all) | 1963 MHz | 768 MHz | 1600 MHz |
-| Docked (Mariko Only) | 2397 MHz | 768 MHz | 2133 MHz
+| Docked (Mariko Only) | 2397 MHz | 1152 MHz | 2133 MHz
+
+- Baseline for performance figures currently: `1685\460\1331'. Game set to 360p for consistency with older internal builds. 480p is achievable without any issues on such clocks.
 
 </div>
 
@@ -75,7 +77,8 @@ These guides explain how to do it:
 
 ## Progress
 
-Here you will learn about the relative progress of the game. It does not reflect the results you can get on the current pre-release build.
+Here you will learn about the relative progress of the game. It does not reflect the results you can get on the current pre-release build since these are numbers
+captured from internal builds
 
 <div align="center">
 
@@ -87,6 +90,7 @@ Here you will learn about the relative progress of the game. It does not reflect
 | Graphics | 80% | Needs corrections, specially with light source brightness |
 | Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
 | Performance | 80% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
+| Extras | 0% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
   
