@@ -41,30 +41,18 @@ Your folder should look like this
 
 ## Performance
 
-You can expect around 10 FPS on stock handheld mode stock settings at `1020/384/1331`. This game is very CPU intensive so I have no idea so to make the game run at those frequencies. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c230) performance is decent enough to enjoy the game at recommended overclock settings
+You can expect around 20~ FPS on stock handheld mode at stock clock: `1020/384/1331`. This game is very CPU intensive because of the huge car density and asset loading. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c230) performance is decent enough to enjoy the game at recommended overclock settings
 
 ## Overclocking
 
-Due to the nature of the RAGE engine and my inexperience with coding, for now you need to overclock your console.
-These are the ""comfortable"" settings that currently (pre-release c177) you can safely run in any console and get a taste of the current progress.
-
-<div align="center">
-
-| Mode | CPU | GPU | Memory |
-| --- | --- | --- | --- |
-| Handheld | 1683 MHz | 460.8 MHz | 1331 MHz |
-| Docked (Safe for all) | 1963 MHz | 768 MHz | 1600 MHz |
-| Docked (Mariko Only) | 2397 MHz | 1152 MHz | 2133 MHz
-
-- Baseline for performance figures currently: `1685\460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks.
+Due to the nature of the RAGE engine, you need to overclock your console.
 
 </div>
 
 > [!CAUTION]
 > Overclocking is inherently risky so tread carefully. V1 consoles are usually very limited by nature of being older units.
-> V2/Lite and OLED consoles can be pushed further so these are recommended if you want an almost lag-free experience
-> meaning 30 FPS with some places going under that, running around 2397 MHz CPU clock, 768 MHz GPU clock and 2133 MHz RAM clock.
-> Make sure to follow the guides below.
+> V2/Lite and OLED consoles can be pushed further because of the updated SOC they have (Tegra X1+).
+> Make sure to follow the guides below. I am not responsible by any damage your console may suffer by improper settings.
 
 These guides explain how to do it:
 
@@ -74,6 +62,26 @@ These guides explain how to do it:
 - **[How to test stability](https://rentry.co/howtoteststability)**
 
 *Special thanks for the Horizon OC team and discord server*
+
+These are the ""comfortable"" settings that currently (pre-release c230) you can safely run in any console and get a taste of the current progress.
+
+<div align="center">
+
+| Mode | CPU | GPU | Memory |
+| --- | --- | --- | --- |
+| Handheld | 1683 MHz | 460.8 MHz | 1331 MHz |
+| Handheld (Mariko Only*) | 1963 MHz | 537 MHz | 2133 MHz |
+| Docked** (Safe for all) | 1963 MHz | 768 MHz | 1600 MHz |
+| Docked** (Mariko Only) | 2397 MHz | 1152 MHz | 2133 MHz |
+
+<div align="left">
+
+`Erista = V1. Mariko = V2/Lite/OLED`
+
+*Erista can work with these settings but you need to properly undervolt the console.
+**Having the console plugged in with the OEM (Original) Nintendo charger or a PPS PD 15 V compatible charger classifies as docked but uses handheld resolution profile.
+
+- Baseline for performance figures currently: `1683460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks but can potentially struggle.
 
 ## Progress
 
