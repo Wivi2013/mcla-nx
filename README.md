@@ -79,6 +79,7 @@ These are the ""comfortable"" settings that currently (pre-release c230) you can
 `Erista = V1. Mariko = V2/Lite/OLED`
 
 *Erista can work with these settings but you need to properly undervolt the console.
+
 **Having the console plugged in with the OEM (Original) Nintendo charger or a PPS PD 15 V compatible charger classifies as docked but uses handheld resolution profile.
 
 - Baseline for performance figures currently: `1683460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks but can potentially struggle.
