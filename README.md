@@ -87,7 +87,7 @@ captured from internal builds
 | Renderer | Complete | Completed in c034 - Swapped to Deko3D on 0.3.0 |
 | Audio | Complete | Completed in c036 - Completely fixed in c151 | 
 | Controls | Complete | Completed in c037 |
-| Graphics | 90% | Needs corrections, specially with light source brightness |
+| Graphics | 90% | Needs corrections, specially with objects transparency |
 | Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
 | Performance | 90% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
 | Extras | 0% | FSR, First run configurator for controls and external editor for graphical settings |
