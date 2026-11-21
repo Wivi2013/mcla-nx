@@ -102,6 +102,16 @@ captured from internal builds
 | Extras | 0% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
+
+## Planned features for Operation Above and Beyond - 1.0
+
+| Component | Status | Description |
+| --- | --- | --- |
+| FSR | 12% | Minimum requirements met for such tech |
+| Keybind customizer | 0% | Planned | 
+| Save-file backup tool | 0% | Planned |
+| Editor for game settings | 0% | Planned |
+| Integrated launcher | 0% | Planned |
   
 ## Legal
 
