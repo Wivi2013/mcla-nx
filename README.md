@@ -98,7 +98,7 @@ captured from internal builds
 | Controls | Complete | Completed in c037 |
 | Graphics | 96% | Needs corrections, specially with objects transparency |
 | Gameplay | 99% | Needs extensive testing with late game features |
-| Performance | 92% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
+| Performance | 98% | Game reaches about 26.4 FPS min on busy scenes. Needs 30 on all occasions |
 | Extras | 35% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
