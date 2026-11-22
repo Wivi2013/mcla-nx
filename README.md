@@ -97,9 +97,9 @@ captured from internal builds
 | Audio | Complete | Completed in c036 - Completely fixed in c151 | 
 | Controls | Complete | Completed in c037 |
 | Graphics | 96% | Needs corrections, specially with objects transparency |
-| Gameplay | 98% | Needs bug fixing and extensive testing with late game features |
+| Gameplay | 99% | Needs extensive testing with late game features |
 | Performance | 92% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
-| Extras | 19% | FSR, First run configurator for controls and external editor for graphical settings |
+| Extras | 22% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
 
@@ -109,7 +109,7 @@ captured from internal builds
   
 | Component | Status | Description |
 | --- | --- | --- |
-| FSR | 90% | FSR proved to work. Planning on possible FSR 2 or even 3 implementation |
+| FSR | 92% | FSR proved to work. Possible FSR 2 or even 3 implementation |
 | Keybind customizer | 0% | Planned | 
 | Save-file backup tool | 0% | Planned |
 | Editor for game settings | 0% | Planned |
