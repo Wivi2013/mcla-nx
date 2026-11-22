@@ -32,7 +32,7 @@ Thanks to StevensND for his port and for the inspiration.
 Your folder should look like this
 ```text
 /switch/MCLA-NX/
-  nfsmw-nx.nro
+  mcla-nx.nro
   mcla_graphics.toml        (graphical settings)
   mcla.toml                 (game settings/debug options)
   shaders-c064/             (the game shaders)
