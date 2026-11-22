@@ -96,22 +96,26 @@ captured from internal builds
 | Renderer | Complete | Completed in c034 - Swapped to Deko3D on 0.3.0 |
 | Audio | Complete | Completed in c036 - Completely fixed in c151 | 
 | Controls | Complete | Completed in c037 |
-| Graphics | 90% | Needs corrections, specially with objects transparency |
-| Gameplay | 90% | Needs bug fixing and extensive testing with late game features |
-| Performance | 90% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
-| Extras | 0% | FSR, First run configurator for controls and external editor for graphical settings |
+| Graphics | 96% | Needs corrections, specially with objects transparency |
+| Gameplay | 98% | Needs bug fixing and extensive testing with late game features |
+| Performance | 92% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
+| Extras | 19% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
 
 ## Planned features for Operation Above and Beyond - 1.0
 
+<div align="center">
+  
 | Component | Status | Description |
 | --- | --- | --- |
-| FSR | 12% | Minimum requirements met for such tech |
+| FSR | 90% | FSR proved to work. Planning on possible FSR 2 or even 3 implementation |
 | Keybind customizer | 0% | Planned | 
 | Save-file backup tool | 0% | Planned |
 | Editor for game settings | 0% | Planned |
 | Integrated launcher | 0% | Planned |
+
+<div align="left">
   
 ## Legal
 
