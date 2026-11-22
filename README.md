@@ -99,7 +99,7 @@ captured from internal builds
 | Graphics | 96% | Needs corrections, specially with objects transparency |
 | Gameplay | 99% | Needs extensive testing with late game features |
 | Performance | 92% | Game reaches about 23 FPS min on busy scenes. Needs 30 on all occasions |
-| Extras | 22% | FSR, First run configurator for controls and external editor for graphical settings |
+| Extras | 35% | FSR, First run configurator for controls and external editor for graphical settings |
 
 <div align="left">
 
@@ -110,7 +110,7 @@ captured from internal builds
 | Component | Status | Description |
 | --- | --- | --- |
 | FSR | 92% | FSR proved to work. Possible FSR 2 or even 3 implementation |
-| Keybind customizer | 0% | Planned | 
+| Key-bind customizer | Complete | Key-binds can be changed inside the game | 
 | Save-file backup tool | 0% | Planned |
 | Editor for game settings | 0% | Planned |
 | Integrated launcher | 0% | Planned |
