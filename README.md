@@ -137,10 +137,15 @@ captured from internal builds
 
 ## Credits:
 The entire [Horizon OC dev team and discord server](https://github.com/Horizon-OC/Horizon-OC) for helping me through the whole process.
+
 [ChanseyIsTheBest](https://github.com/ChanseyIsTheBest) for his amazing ports which I was able to learn a lot from to optimize MCLA.
+
 [StevensND](https://github.com/StevensND) for his amazing Most Wanted port, which served as the first base and inspired me to continue this project.
+
 [centollOS](https://github.com/centollOS) for helping me build the base for Deko3D correctly.
+
 [tuancapo](https://github.com/tuancapoo) for helping me with the shading compiling system.
+
 Advanced Micro Devices: for the creation of FSR.
 
 ## Legal
