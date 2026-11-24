@@ -10,37 +10,70 @@ Native port of the 2008's fourth installment on the Midnight Club series: **Midn
 There is no emulation here. None, zilch, nada. It is pure PowerPC code translated to C++ using [ReXGlue](https://github.com/rexglue/rexglue-sdk), thanks to the efforts of the devs of [MCLA-Recomp project](https://github.com/RenanQueiroz/mcla-recomp). 
 The game the runs directly with shaders compiled specifically for the Switch, with a launcher compiled to run with the recompiled code. It uses Deko3D as its 3D renderer and targets 30 FPS. Mild CPU overclock might be needed to reach such target. Everything will be explained in this document.
 
-Thanks to StevensND for his port and for the inspiration.
-
 > [!NOTE]
 > You need your own Xbox 360 copy of the game (`.iso`) to be able to play this port. This port does not come with copyrighted material. I don't want John Rockstar at my doorstep, y'know.
 
 ## How to install
 
-1: Download the Switch executables from [releases](https://github.com/Wivi2013/mcla-nx/releases) and extract it.
+> [!NOTE]
+> The only version supported is the Midnight Club: Los Angeles - Complete Edition for the EUR and USA region in .iso format.
 
-2: Send the "switch" folder inside the extracted .rar to the root of the Switch SD card.
+1: Open the [installer page](https://wivi2013.github.io/mcla-nx/) made specifically for this port.
 
-3: Visit [MCLA-Recomp project](https://github.com/RenanQueiroz/mcla-recomp) and follow their instructions to recompile your .iso.
+2: Press `Choose disc image` and navigate to where your legal dump of Midnight Club: Los Angeles - Complete Edition is located.
 
-4: Locate the game files and copy all of them to switch/MCLA-NX/game
+3: Press `Save as ZIP` then let the the browser do its thing. It will then download the recompiled game with everything you need for the port to run on your Switch.
 
-5: Open Sphaira and create a forwarder with 39 bit address space and 4 CPUs.
+4: Extract the contents of the .zip and move them to the root of your Switch's SD card.
 
-6: Open game and play (optional)
-
-Your folder should look like this
+Your game folder should look like this
 ```text
 /switch/MCLA-NX/
-  mcla-nx.nro       
-  mcla.toml                 (game settings/debug options)
-  shaders-c064/             (the game shaders)
-  game/                     (the game itself)
+  game/                         (the game itself)
+  shaders-c064/              
+      deko-host/                (Deko3D shaders compiled for the GM20B/B01)
+      shader-cache/             (shader cache that grows the more you play)
+      deko3d_glsl.bin           (pre-decompiled shading data)
+      mcla_shader_metadata.bin  (shader lookout map)
+  mcla-nx.nro                   (the executable)
+  mcla.toml                     (game settings/debug options)
 ```
 
 ## Performance
 
-You can expect around 20~ FPS on stock handheld mode at stock clock: `1020/384/1331`. This game is very CPU intensive because of the huge car density and asset loading. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (pre-release c230) performance is decent enough to enjoy the game at recommended overclock settings
+You can expect around 20~ FPS on stock handheld mode at stock clock: `1020/384/1331`. This game is very CPU intensive because of the huge car density and asset loading. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (Beta 1 c299) performance is decent enough to enjoy the game at recommended overclock settings.
+
+You can additionally tweak the performance and display settings to suit your preferences.
+
+These settings are found inside the options menu ingame by pressing the "plus" button and the navigating to the options slot by pressing "DPAD Right" or "R" two times. There you can find the Display and Performance options.
+
+```text
+Display>
+  <Handheld Resolution - Range: 360p to 1080p.        (Sets the resolution when playing in handheld mode)
+  <Docked Resolution - Range: 360p to 1080p.          (Sets the resolution when playing in docked mode)
+  <PD Charger Resolution* - Range: 360p to 1080p.      (Sets the resolution when playing plugged in with OEM charger)
+  <Anisotropic filtering - Range: GAME to 16x.        (Sets the texturing filtering passes. GAME = How 360 done)
+  <UI AT 720P - Range: Yes to no.                     (Enables if the UI stays sharp at resolutions lower than 720p)
+Performance>
+  <FPS Target - Range: UNCAPPED to 120.               (Sets framerate target for Vsync and game engine)
+  <VSync - Range: Yes to no.                          (Enables vertical sync to eliminate tearing)
+  <Motion Blue - Range: Yes to no.                    (Enables motion blur effects)
+  <Upscaler - Range: Bilinear or FSR1.                (Changes between upscalers)
+  <FSR Softness - Range: 0.00 to 2.00.                (Modifies the sharpness that FSR provides)
+  <Single tile rendering - Range: Yes to no.          (Tells whether the GPU renders frames in single or multiple pieces)
+  <City detail distance - Range: 0.00 to 1.00.        (Sets the relative distance where details render fully)
+  <Traffic detail distance - Range: 0.00 to 1.00.     (Sets the relative distance where traffic changes the LOD model)
+  <Traffic distance - Range: 250 to 400.              (Sets minimum distance for traffic to spawn)
+  <Traffic density - Range: 0.00 to 1.00.             (Controls how many cars % spawn)
+  <Pedestrians - Range: 0.00 to 1.00.                 (Controls pedestrian spawn density)
+  <Parked cars - Range: 0.00 to 1.00.                 (Controls density of parked cars)
+  <Simple car shadows - Range: Yes to no.             (Enables simple car shadows)
+  <Distant trees - Range: Yes to no.                  (Enables rendering of low LOD models of trees over long distances)
+  <Fullscreen blur - Range: Yes to no.                (Enables blur over scenery)
+  <Anti aliasing - Range: Yes to no.                  (Enables dynamic MSAA to smooth out edges)
+```
+- Settings marked with `(Next start)` or `(Next load)` require a game re-start to fully apply.
+- *The PD charger profile is ONLY loaded if you have a PD 15V or OEM charger connected to your device. It will not work on chargers that only output 5V. The Switch does not accept 9 or 12 V.
 
 ## Overclocking
 
@@ -98,23 +131,18 @@ captured from internal builds
 | Graphics | 96% | Needs corrections, specially with objects transparency |
 | Gameplay | 99% | Needs extensive testing with late game features |
 | Performance | 98% | Game reaches about 26.4 FPS min on busy scenes. Needs 30 on all occasions |
-| Extras | 88% | FSR and keybind configurator. Some extra things to ease things up |
+| Extras | 88% | FSR and keybind configurator done. Some extra things to ease things up |
 
 <div align="left">
 
-## Planned features for Operation Above and Beyond - 1.0
+## Credits:
+The entire [Horizon OC dev team and discord server](https://github.com/Horizon-OC/Horizon-OC) for helping me through the whole process.
+[ChanseyIsTheBest](https://github.com/ChanseyIsTheBest) for his amazing ports which I was able to learn a lot from to optimize MCLA.
+[StevensND](https://github.com/StevensND) for his amazing Most Wanted port, which served as the first base and inspired me to continue this project.
+[centollOS](https://github.com/centollOS) for helping me build the base for Deko3D correctly.
+[tuancapo](https://github.com/tuancapoo) for helping me with the shading compiling system.
+Advanced Micro Devices: for the creation of FSR.
 
-<div align="center">
-  
-| Component | Status | Description |
-| --- | --- | --- |
-| FSR | 92% | FSR proved to work. Possible FSR 2 or even 3 implementation |
-| Key-bind customizer | Complete | Key-binds can be changed inside the game | 
-| Save-file backup tool | 0% | Planned |
-| Editor for game settings | Complete | All relevant settings can be changed ingame |
-
-<div align="left">
-  
 ## Legal
 
 No affiliation with Take-Two or Rockstar Games and Nintendo. "Midnight Club" and "Midnight Club Los Angeles" are trademarks of Take Two Interactive.
