@@ -1,0 +1,55 @@
+name: Publish the installer
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['installer/**', 'tools/build_payload.py', 'tools/disc.json', 'tools/mcla.default.toml', '.github/workflows/pages.yml']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the page with the newest release's .zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p _site dl
+          cp -r installer/. _site/
+          touch _site/.nojekyll
+          tag=$(gh api "repos/$GITHUB_REPOSITORY/releases?per_page=100" --jq '[.[] | select(.draft == false) | select(any(.assets[]; .name | ascii_downcase | endswith(".zip")))][0].tag_name // empty')
+          if [ -z "$tag" ]; then
+            echo "::warning::No release has a .zip attached yet: the page is published without program files and says so."
+            exit 0
+          fi
+          echo "Release: $tag"
+          gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern '*.zip' --pattern '*.ZIP' --dir dl
+          python3 tools/build_payload.py dl/* --out _site --version "$tag"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
