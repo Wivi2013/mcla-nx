@@ -32,8 +32,7 @@ Thanks to StevensND for his port and for the inspiration.
 Your folder should look like this
 ```text
 /switch/MCLA-NX/
-  mcla-nx.nro
-  mcla_graphics.toml        (graphical settings)
+  mcla-nx.nro       
   mcla.toml                 (game settings/debug options)
   shaders-c064/             (the game shaders)
   game/                     (the game itself)
@@ -82,7 +81,7 @@ These are the ""comfortable"" settings that currently (pre-release c230) you can
 
 **Having the console plugged in with the OEM (Original) Nintendo charger or a PPS PD 15 V compatible charger classifies as docked but uses handheld resolution profile.
 
-- Baseline for performance figures currently: `1683460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks but can potentially struggle.
+- Baseline for performance figures currently: `1683\460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks but can potentially struggle.
 
 ## Progress
 
@@ -99,7 +98,7 @@ captured from internal builds
 | Graphics | 96% | Needs corrections, specially with objects transparency |
 | Gameplay | 99% | Needs extensive testing with late game features |
 | Performance | 98% | Game reaches about 26.4 FPS min on busy scenes. Needs 30 on all occasions |
-| Extras | 35% | FSR, First run configurator for controls and external editor for graphical settings |
+| Extras | 88% | FSR and keybind configurator. Some extra things to ease things up |
 
 <div align="left">
 
@@ -112,8 +111,7 @@ captured from internal builds
 | FSR | 92% | FSR proved to work. Possible FSR 2 or even 3 implementation |
 | Key-bind customizer | Complete | Key-binds can be changed inside the game | 
 | Save-file backup tool | 0% | Planned |
-| Editor for game settings | 0% | Planned |
-| Integrated launcher | 0% | Planned |
+| Editor for game settings | Complete | All relevant settings can be changed ingame |
 
 <div align="left">
   
@@ -123,4 +121,4 @@ No affiliation with Take-Two or Rockstar Games and Nintendo. "Midnight Club" and
 This repository contains no assets or program code from the original game. Users must provide their own legally obtained copy. 
 Running homebrew requires custom firmware, which is against Nintendo's TOS. Doing so risks a ban on your console. You have been warned.
 
-Source code will be released when I get the time to get everything sorted.
+Source code will be released when I get the time to get everything sorted. You don't wanna see how much of a mess this thing is right now.
