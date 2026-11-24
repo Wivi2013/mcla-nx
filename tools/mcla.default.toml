@@ -1,0 +1,64 @@
+# MCLA-NX settings. The pause menu changes most of them and saves them here.
+# Lines starting with # are notes. Most display settings apply at the next start.
+
+# Display (pause menu > DISPLAY)
+mcla_handheld_resolution = "480p"   # 360p, 480p, 720p or 1080p
+mcla_docked_resolution = "720p"
+mcla_charger_resolution = "off"     # started handheld on a 15 V USB-PD charger: off, 360p, 480p, 720p or 1080p
+mcla_ui_native = true               # HUD and menus at 720p, the 3D at the resolution above
+renut_anisotropic_filtering = "Game"
+
+# Performance (pause menu > PERFORMANCE)
+mcla_fps = 30
+renut_vsync = true
+mcla_motion_blur = true
+mcla_upscaler = "fsr1"              # "fsr1" or "bilinear"
+mcla_fsr_sharpness = 0.25           # 0 = sharpest ... 2 = soft
+mcla_single_tile = true
+mcla_msaa = false
+mcla_city_lod = 0.5                 # city detail distance (1.0 as on the Xbox 360)
+mcla_traffic_lod = 0.5              # traffic detail distance (1.0 as on the Xbox 360)
+mcla_traffic_distance = 400
+mcla_traffic_density = 0.5          # 1.0 as on the Xbox 360
+mcla_pedestrians = 0.5              # 1.0 as on the Xbox 360
+mcla_parked_cars = 1.0
+mcla_shadows = false
+mcla_night_shadows = true
+mcla_foliage_shadows = false
+mcla_race_shadows = false
+mcla_fast_car_shadows = false
+mcla_depth_of_field = true
+mcla_fullscreen_blur = true
+
+# Controls (pause menu > CONTROLS)
+mcla_intro = "normal"
+mcla_button_prompts = "auto"
+input_vibracion = true              # controller rumble
+#input_remap_a = "default"          # what each Switch button gives the game, e.g. "b" to swap A and B
+#input_remap_b = "default"
+#input_remap_x = "default"
+#input_remap_y = "default"
+
+# Engine (leave as they are)
+mcla_audio_channels = 2
+mcla_image_heap_reserve_mb = 192
+mcla_phase_off = "1000"
+mcla_pipeline_replay = true
+mcla_viewport_memo = true
+mcla_key_direct = true
+mcla_constants_prefetch = true
+mcla_fast_heap = true
+mcla_send_native = true
+mcla_texture_settle_tiled_period = 4
+mcla_texture_hash_prefetch = true
+mcla_stream_settle_age = 30
+mcla_texture_memo_bits = 9
+mcla_spin_sleep_low = true
+mcla_spin_sleep = true
+mcla_sem_futex = true
+mcla_sem_notify_one = true
+mcla_reuse_exact = true
+mcla_wait_wake = true
+mcla_audio_skip_silent_voices = true
+mcla_texture_memo_4way = false
+mcla_chain_range_masks = false

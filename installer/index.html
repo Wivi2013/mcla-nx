@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCLA-NX Installer</title>
+<meta name="description" content="Makes the Switch files for MCLA-NX from your own Midnight Club: Los Angeles disc image, in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;800&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night: #0F1530;
+  --panel: #172041;
+  --line: #2C3766;
+  --route: #3A4677;
+  --lamp: #FFB547;
+  --lamp-soft: rgba(255, 181, 71, 0.16);
+  --text: #E7EAF6;
+  --muted: #A0A8CB;
+  --stop: #FF6161;
+  --radius: 10px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--night);
+  background-image: radial-gradient(1200px 500px at 85% -10%, rgba(255, 181, 71, 0.07), transparent 60%);
+  color: var(--text);
+  font: 400 17px/1.55 Saira, system-ui, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 56px 20px 80px; }
+h1, h2 { font-family: 'Saira Condensed', Saira, sans-serif; letter-spacing: 0.01em; margin: 0; }
+h1 { font-weight: 800; font-size: clamp(2.4rem, 7vw, 3.9rem); line-height: 1.02; }
+h2 { font-weight: 600; font-size: 1.55rem; line-height: 1.2; }
+p { margin: 0.5em 0 0; }
+.lede { color: var(--muted); max-width: 34em; margin-top: 18px; }
+a { color: var(--lamp); }
+code { font-size: 0.92em; background: var(--panel); padding: 1px 6px; border-radius: 4px; }
+
+/* the route: each step is a stop on a GPS line */
+.route { list-style: none; margin: 48px 0 0; padding: 0; }
+.stop { position: relative; padding: 0 0 40px 52px; }
+.stop::before {
+  content: ''; position: absolute; left: 13px; top: 30px; bottom: -2px; width: 4px; border-radius: 2px;
+  background: var(--route);
+}
+.stop:last-child::before { display: none; }
+.stop.done::before { background: var(--lamp); box-shadow: 0 0 12px rgba(255, 181, 71, 0.45); }
+.marker {
+  position: absolute; left: 0; top: 2px; width: 30px; height: 30px; border-radius: 50%;
+  border: 4px solid var(--route); background: var(--night);
+  display: grid; place-items: center; font: 600 0.85rem 'Saira Condensed', sans-serif; color: var(--muted);
+}
+.stop.active .marker { border-color: var(--lamp); color: var(--lamp); }
+.stop.done .marker { border-color: var(--lamp); background: var(--lamp); color: var(--night); }
+@media (prefers-reduced-motion: no-preference) {
+  .stop.active .marker { animation: beacon 2.4s ease-in-out infinite; }
+  @keyframes beacon { 50% { box-shadow: 0 0 0 8px var(--lamp-soft); } }
+}
+.stop.locked h2, .stop.locked .body { opacity: 0.45; }
+.body { margin-top: 10px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+button, .file-button {
+  font: 600 1rem Saira, sans-serif; border-radius: var(--radius); padding: 12px 20px; cursor: pointer;
+  border: 2px solid var(--lamp); background: var(--lamp); color: var(--night);
+}
+button.quiet { background: transparent; color: var(--lamp); }
+button:disabled { opacity: 0.4; cursor: not-allowed; }
+button:focus-visible, .file-button:focus-within, a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.file-button { display: inline-block; position: relative; }
+.file-button input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+
+.status { margin-top: 14px; padding: 12px 14px; border-radius: var(--radius); background: var(--panel); border-left: 4px solid var(--line); }
+.status.ok { border-left-color: var(--lamp); }
+.status.bad { border-left-color: var(--stop); }
+.status:empty { display: none; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 2px 16px; margin-top: 8px; color: var(--muted); font-size: 0.95rem; }
+.facts dt { color: var(--text); }
+.facts dd { margin: 0; overflow-wrap: anywhere; }
+
+.meter { margin-top: 16px; height: 12px; border-radius: 6px; background: var(--route); overflow: hidden; }
+.meter > div { height: 100%; width: 0; background: var(--lamp); transition: width 0.3s linear; }
+.readout { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; color: var(--muted); font-size: 0.95rem; }
+.readout strong { color: var(--text); font-weight: 600; }
+.current { color: var(--muted); font-size: 0.9rem; margin-top: 4px; overflow-wrap: anywhere; }
+
+ol.howto { margin: 10px 0 0; padding-left: 1.3em; }
+ol.howto li { margin-top: 6px; }
+.side { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; }
+.side h2 { font-size: 1.2rem; color: var(--text); }
+.hidden { display: none !important; }
+@media (max-width: 480px) {
+  main { padding-top: 36px; }
+  .stop { padding-left: 44px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Midnight Club: Los Angeles on your Switch</h1>
+    <p class="lede">This page makes the SD card files for MCLA-NX from your own disc image of the game. The image is read
+      here, in this browser: nothing is uploaded.</p>
+  </header>
+
+  <ol class="route" id="route">
+    <li class="stop active" id="step-disc">
+      <span class="marker" aria-hidden="true">1</span>
+      <h2>Choose your disc image</h2>
+      <div class="body">
+        <p>The Xbox 360 disc of Midnight Club: Los Angeles Complete Edition, as an <code>.iso</code> file.</p>
+        <div class="actions">
+          <label class="file-button">Choose disc image<input type="file" id="iso" accept=".iso,application/octet-stream"></label>
+          <button class="quiet" id="update-only" type="button">Update an earlier install instead</button>
+        </div>
+        <div class="status" id="disc-status" role="status" aria-live="polite"></div>
+      </div>
+    </li>
+
+    <li class="stop locked" id="step-target">
+      <span class="marker" aria-hidden="true">2</span>
+      <h2>Choose where the files go</h2>
+      <div class="body">
+        <p id="target-hint">Write them straight to your SD card, or save one ZIP file to unpack onto the SD card later.</p>
+        <div class="actions">
+          <button id="to-folder" type="button" disabled>Write to SD card</button>
+          <button class="quiet" id="to-zip" type="button" disabled>Save as ZIP</button>
+        </div>
+        <div class="status" id="target-status" role="status" aria-live="polite"></div>
+      </div>
+    </li>
+
+    <li class="stop locked" id="step-copy">
+      <span class="marker" aria-hidden="true">3</span>
+      <h2>Copy</h2>
+      <div class="body">
+        <p id="copy-hint">Keep this page open until it finishes. The game files are about 6 GB.</p>
+        <div class="meter" aria-hidden="true"><div id="meter"></div></div>
+        <div class="readout"><span id="done-bytes"><strong>0 GB</strong> of 0 GB</span><span id="speed"></span></div>
+        <div class="current" id="current"></div>
+        <div class="actions"><button class="quiet hidden" id="cancel" type="button">Stop copying</button></div>
+        <div class="status" id="copy-status" role="status" aria-live="polite"></div>
+      </div>
+    </li>
+
+    <li class="stop locked" id="step-play">
+      <span class="marker" aria-hidden="true">4</span>
+      <h2>Play</h2>
+      <div class="body">
+        <ol class="howto">
+          <li id="play-unzip" class="hidden">Unpack the ZIP at the root of the SD card. It holds a <code>switch</code> folder.</li>
+          <li>Put the SD card back in the Switch. In Sphaira, make a forwarder for <strong id="nro-name">mcla-nx.nro</strong>
+            with the 39-bit address space and 4 CPUs (the game needs that much memory).</li>
+          <li>Start the game from its forwarder. Settings are in the pause menu and saved in
+            <code id="toml-path">mcla.toml</code>. The <a href="https://github.com/Wivi2013/mcla-nx#overclocking">overclocking
+            notes</a> say which clocks it needs.</li>
+        </ol>
+      </div>
+    </li>
+  </ol>
+
+  <section class="side">
+    <h2>About this page</h2>
+    <p>You need your own copy of the game. The files are made from it on this device; the program itself (<span id="version">MCLA-NX</span>)
+      comes with this page. Only the USA/Europe disc (title ID 545407F8) works.</p>
+    <p>Writing straight to the SD card works in Chrome and Edge on a computer. Everywhere else, the ZIP is saved by the
+      browser's own download.</p>
+    <p>MCLA-NX is a fan project. It is not affiliated with or endorsed by Rockstar Games or Take-Two Interactive.
+      Midnight Club is a trademark of Take-Two Interactive.</p>
+  </section>
+</main>
+<script>
+// Runs before the page's module: explains what stops it instead of doing nothing.
+(function () {
+  function show(msg) {
+    var el = document.getElementById('disc-status');
+    el.className = 'status bad';
+    el.innerHTML = msg;
+  }
+  if (location.protocol === 'file:') {
+    show('This page cannot run from a file opened on the disk: the browser blocks its scripts there. Open it through ' +
+      'its web address (the GitHub Pages site), or with <code>Run-Installer-Local.bat</code> on the PC with the project.');
+    document.getElementById('iso').disabled = true;
+    document.getElementById('update-only').disabled = true;
+    return;
+  }
+  window.addEventListener('error', function (e) { show('The page stopped: ' + (e.message || e)); });
+  window.addEventListener('unhandledrejection', function (e) {
+    show('The page stopped: ' + ((e.reason && e.reason.message) || e.reason));
+  });
+  setTimeout(function () {
+    if (!window.__mclaReady) show('The page\'s script did not start. Use an up-to-date Chrome, Edge, Firefox or Safari.');
+  }, 4000);
+})();
+</script>
+<script type="module" src="app.js?v=5"></script>
+</body>
+</html>
