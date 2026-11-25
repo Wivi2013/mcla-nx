@@ -41,11 +41,11 @@ Your game folder should look like this
 
 ## Performance
 
-You can expect around 20~ FPS on stock handheld mode at stock clock: `1020/384/1331`. This game is very CPU intensive because of the huge car density and asset loading. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (Beta 1 c299) performance is decent enough to enjoy the game at recommended overclock settings.
+You can expect around 20~ FPS on stock handheld mode at stock clock: `1020/384/1331`. This game is very CPU intensive because of the huge car density and asset loading. On docked clocks (`1785/768/1600`) performance is overall tolerable. As for now (Beta 1 c300) performance is decent enough to enjoy the game at recommended overclock settings.
 
 You can additionally tweak the performance and display settings to suit your preferences.
 
-These settings are found inside the options menu ingame by pressing the "plus" button and the navigating to the options slot by pressing "DPAD Right" or "R" two times. There you can find the Display and Performance options.
+These settings are found inside the options menu in-game by pressing the "plus" button and the navigating to the options slot by pressing "DPAD Right" or "R" two times. There you can find the Display and Performance options.
 
 ```text
 Display>
@@ -58,7 +58,7 @@ Performance>
   <FPS Target - Range: UNCAPPED to 120.               (Sets framerate target for Vsync and game engine)
   <VSync - Range: Yes to no.                          (Enables vertical sync to eliminate tearing)
   <Motion Blue - Range: Yes to no.                    (Enables motion blur effects)
-  <Upscaler - Range: Bilinear or FSR1.                (Changes between upscalers)
+  <Upscaler - Range:FSR 1 or disabled.                (Changes between upscalers)
   <FSR Softness - Range: 0.00 to 2.00.                (Modifies the sharpness that FSR provides)
   <Single tile rendering - Range: Yes to no.          (Tells whether the GPU renders frames in single or multiple pieces)
   <City detail distance - Range: 0.00 to 1.00.        (Sets the relative distance where details render fully)
@@ -112,7 +112,7 @@ These are the ""comfortable"" settings that currently (pre-release c230) you can
 
 *Erista can work with these settings but you need to properly undervolt the console.
 
-**Having the console plugged in with the OEM (Original) Nintendo charger or a PPS PD 15 V compatible charger classifies as docked but uses handheld resolution profile.
+**Having the console plugged in with the OEM (Original) Nintendo charger or a PPS PD 15 V compatible charger classifies as docked but uses its own resolution profile.
 
 - Baseline for performance figures currently: `1683\460\1331`. Game set to 360p for consistency with older internal builds. 480p is achievable on such clocks but can potentially struggle.
 
